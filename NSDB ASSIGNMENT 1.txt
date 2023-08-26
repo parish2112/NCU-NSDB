@@ -1,0 +1,1072 @@
+Last login: Fri Aug 25 12:35:52 on ttys000
+(base) paritoshsharma@Paritoshs-MacBook-Pro ~ % mongosh
+Current Mongosh Log ID:	64e9a7a6967c8a529793f4ec
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.3
+Using MongoDB:		4.4.21
+Using Mongosh:		1.10.3
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-08-11T12:55:25.623+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use shoppingapp
+switched to db shoppingapp
+shoppingapp> show collections
+customers
+movies
+product
+products
+shoppingapp> exit
+(base) paritoshsharma@Paritoshs-MacBook-Pro ~ % mongosh
+Current Mongosh Log ID:	64e9a7c570be46bba5b92ed8
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.3
+Using MongoDB:		4.4.21
+Using Mongosh:		1.10.3
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-08-11T12:55:25.623+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use ncu
+switched to db ncu
+ncu> db.createCollection("employee");
+{ ok: 1 }
+ncu> db.insertMany([{
+...     emono: 111,
+...     ename: "Deepali Vaidya",
+...     sal: 40000.00,
+...     dept: { deptno: 12, dname: "Hr", dloc: "Mumbai" },
+...     Desg: "Analyst",
+...    Bonus: 7000.00,
+...     mgr: { name: "Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...     },
+...   {
+...     emono: 112,
+...     ename: "Nikunj Khitha",
+...     sal: 104000.00,
+: "Mumbai" },
+    Desg: "Coder",
+    mgr: { name: " Rohan", num: 111 },
+    project: [
+      { name: "Project-1", Hrs: 4 },
+      { name: "Project-2", Hrs: 4 }
+    ]
+  },
+  {
+    emono: 113,
+    ename: "Aryan",
+    sal: 94000.00,
+    Bonus: 8000.00,
+    dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+    Desg: " Analyst ",
+    mgr: { name: " Satish", num: 111 },
+    project: [
+      { name: "Project-1", Hrs: 4 },
+      { name: "Project-2", Hrs: 4 }
+    ]
+  },
+
+
+
+
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     Bonus: 8000.00,
+...     mgr: { name: "Rohan", num: 112 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Shivam",
+...     sal: 44000.00,
+...     Bonus: 7000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 114,
+...     ename: "Gaurav Rag",
+...     sal: 74000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     mgr: { name: " Rohan", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Aryan",
+...     sal: 94000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+... 
+... 
+... 
+... 
+... ]);
+TypeError: db.insertMany is not a function
+ncu> db.employee.insertMany([{
+...     emono: 111,
+...     ename: "Deepali Vaidya",
+...     sal: 40000.00,
+...     dept: { deptno: 12, dname: "Hr", dloc: "Mumbai" },
+...     Desg: "Analyst",
+...    Bonus: 7000.00,
+...     mgr: { name: "Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...     },
+...   {
+...     emono: 112,
+...     ename: "Nikunj Khitha",
+...     sal: 104000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     Bonus: 8000.00,
+...     mgr: { name: "Rohan", num: 112 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+: "Mumbai" },
+    Desg: "Coder",
+    mgr: { name: " Rohan", num: 111 },
+    project: [
+      { name: "Project-1", Hrs: 4 },
+      { name: "Project-2", Hrs: 4 }
+    ]
+  },
+  {
+    emono: 113,
+    ename: "Aryan",
+    sal: 94000.00,
+    Bonus: 8000.00,
+    dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+    Desg: " Analyst ",
+    mgr: { name: " Satish", num: 111 },
+    project: [
+      { name: "Project-1", Hrs: 4 },
+      { name: "Project-2", Hrs: 4 }
+    ]
+  },
+
+
+
+
+...     emono: 113,
+...     ename: "Shivam",
+...     sal: 44000.00,
+...     Bonus: 7000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 114,
+...     ename: "Gaurav Rag",
+...     sal: 74000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     mgr: { name: " Rohan", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Aryan",
+...     sal: 94000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+... 
+... 
+... 
+... 
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64e9a92070be46bba5b92ed9"),
+    '1': ObjectId("64e9a92070be46bba5b92eda"),
+    '2': ObjectId("64e9a92070be46bba5b92edb"),
+    '3': ObjectId("64e9a92070be46bba5b92edc"),
+    '4': ObjectId("64e9a92070be46bba5b92edd")
+  }
+}
+ncu> db.employee.insertMany([
+...   {
+...     emono: 111,
+...     ename: "Deepali Vaidya",
+...     sal: 40000.00,
+...     dept: { deptno: 12, dname: "Hr", dloc: "Mumbai" },
+...     Desg: "Analyst",
+...    Bonus: 7000.00,
+...     mgr: { name: "Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...     },
+...   {
+...     emono: 112,
+...     ename: "Nikunj Khitha",
+...     sal: 104000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     Bonus: 8000.00,
+...     mgr: { name: "Rohan", num: 112 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Shivam",
+...     sal: 44000.00,
+...     Bonus: 7000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 114,
+...     ename: "Gaurav Rag",
+...     sal: 74000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     mgr: { name: " Rohan", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Aryan",
+...     sal: 94000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+... 
+... 
+... 
+... 
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64e9a94f70be46bba5b92ede"),
+    '1': ObjectId("64e9a94f70be46bba5b92edf"),
+    '2': ObjectId("64e9a94f70be46bba5b92ee0"),
+    '3': ObjectId("64e9a94f70be46bba5b92ee1"),
+    '4': ObjectId("64e9a94f70be46bba5b92ee2")
+  }
+}
+ncu> db.employee.find()
+[
+  {
+    _id: ObjectId("64e9a92070be46bba5b92ed9"),
+    emono: 111,
+    ename: 'Deepali Vaidya',
+    sal: 40000,
+    dept: { deptno: 12, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: 'Analyst',
+    Bonus: 7000,
+    mgr: { name: 'Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a92070be46bba5b92eda"),
+    emono: 112,
+    ename: 'Nikunj Khitha',
+    sal: 104000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    Bonus: 8000,
+    mgr: { name: 'Rohan', num: 112 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a92070be46bba5b92edb"),
+    emono: 113,
+    ename: 'Shivam',
+    sal: 44000,
+    Bonus: 7000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a92070be46bba5b92edc"),
+    emono: 114,
+    ename: 'Gaurav Rag',
+    sal: 74000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    mgr: { name: ' Rohan', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a92070be46bba5b92edd"),
+    emono: 113,
+    ename: 'Aryan',
+    sal: 94000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a94f70be46bba5b92ede"),
+    emono: 111,
+    ename: 'Deepali Vaidya',
+    sal: 40000,
+    dept: { deptno: 12, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: 'Analyst',
+    Bonus: 7000,
+    mgr: { name: 'Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a94f70be46bba5b92edf"),
+    emono: 112,
+    ename: 'Nikunj Khitha',
+    sal: 104000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    Bonus: 8000,
+    mgr: { name: 'Rohan', num: 112 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a94f70be46bba5b92ee0"),
+    emono: 113,
+    ename: 'Shivam',
+    sal: 44000,
+    Bonus: 7000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a94f70be46bba5b92ee1"),
+    emono: 114,
+    ename: 'Gaurav Rag',
+    sal: 74000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    mgr: { name: ' Rohan', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a94f70be46bba5b92ee2"),
+    emono: 113,
+    ename: 'Aryan',
+    sal: 94000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  }
+]
+ncu> db.drop
+ncu.drop
+ncu> db.drop
+ncu.drop
+ncu> showcollections
+ReferenceError: showcollections is not defined
+ncu> db.showCollections
+ncu.showCollections
+ncu> use ncudb
+switched to db ncudb
+ncudb> db.createCollection("employee");
+{ ok: 1 }
+ncudb> db.employee.insertMany([
+...   {
+...     emono: 111,
+...     ename: "Deepali Vaidya",
+...     sal: 40000.00,
+...     dept: { deptno: 12, dname: "Hr", dloc: "Mumbai" },
+...     Desg: "Analyst",
+...    Bonus: 7000.00,
+...     mgr: { name: "Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...     },
+...   {
+...     emono: 112,
+...     ename: "Nikunj Khitha",
+...     sal: 104000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     Bonus: 8000.00,
+...     mgr: { name: "Rohan", num: 112 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Shivam",
+...     sal: 44000.00,
+...     Bonus: 7000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 114,
+...     ename: "Gaurav Rag",
+...     sal: 74000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "CS", dloc: "Mumbai" },
+...     Desg: "Coder",
+...     mgr: { name: " Rohan", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+...   {
+...     emono: 113,
+...     ename: "Aryan",
+...     sal: 94000.00,
+...     Bonus: 8000.00,
+...     dept: { deptno: 13, dname: "Hr", dloc: "Mumbai" },
+...     Desg: " Analyst ",
+...     mgr: { name: " Satish", num: 111 },
+...     project: [
+...       { name: "Project-1", Hrs: 4 },
+...       { name: "Project-2", Hrs: 4 }
+...     ]
+...   },
+... 
+... 
+... 
+... 
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64e9a9cf70be46bba5b92ee3"),
+    '1': ObjectId("64e9a9cf70be46bba5b92ee4"),
+    '2': ObjectId("64e9a9cf70be46bba5b92ee5"),
+    '3': ObjectId("64e9a9cf70be46bba5b92ee6"),
+    '4': ObjectId("64e9a9cf70be46bba5b92ee7")
+  }
+}
+ncudb> db.employee.find();
+[
+  {
+    _id: ObjectId("64e9a9cf70be46bba5b92ee3"),
+    emono: 111,
+    ename: 'Deepali Vaidya',
+    sal: 40000,
+    dept: { deptno: 12, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: 'Analyst',
+    Bonus: 7000,
+    mgr: { name: 'Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a9cf70be46bba5b92ee4"),
+    emono: 112,
+    ename: 'Nikunj Khitha',
+    sal: 104000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    Bonus: 8000,
+    mgr: { name: 'Rohan', num: 112 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a9cf70be46bba5b92ee5"),
+    emono: 113,
+    ename: 'Shivam',
+    sal: 44000,
+    Bonus: 7000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a9cf70be46bba5b92ee6"),
+    emono: 114,
+    ename: 'Gaurav Rag',
+    sal: 74000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'CS', dloc: 'Mumbai' },
+    Desg: 'Coder',
+    mgr: { name: ' Rohan', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  },
+  {
+    _id: ObjectId("64e9a9cf70be46bba5b92ee7"),
+    emono: 113,
+    ename: 'Aryan',
+    sal: 94000,
+    Bonus: 8000,
+    dept: { deptno: 13, dname: 'Hr', dloc: 'Mumbai' },
+    Desg: ' Analyst ',
+    mgr: { name: ' Satish', num: 111 },
+    project: [ { name: 'Project-1', Hrs: 4 }, { name: 'Project-2', Hrs: 4 } ]
+  }
+]
+ncudb> db.Employee.updateMany(
+...   { "Desg": "CLERK" },
+...   { $set: { "Desg": "AO" } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> 2)	db.Employee.updateMany(
+Uncaught:
+SyntaxError: Missing semicolon. (1:1)
+
+> 1 | 2)	db.Employee.updateMany(
+    |  ^
+  2 |
+
+ncudb>   { "Desg": "Analyst", "project.name": "Project-1" },
+...   { $set: { "project.$.Hrs": 5 } }
+... );
+Uncaught:
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 |   { "Desg": "Analyst", "project.name": "Project-1" },
+    |           ^
+  2 |   { $set: { "project.$.Hrs": 5 } }
+  3 | );
+  4 |
+
+ncudb> db.employee.updateMany({ "Desg": "Analyst", "project.name": "Project-1" },
+...   { $set: { "project.$.Hrs": 5 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany(
+...   { "ename": /^Deep/ }, // Find employees whose names start with "Deep"
+...   {
+...    $push: {
+...       "project": { $each: [{ "name": "project-3", "Hrs": 2 }, { "name": "project-4", "Hrs": 2 }] }
+...     }
+...  }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "sal": { $gt: 50000 } },
+...   { $inc: { "bonus": 2000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "sal": { $lt: 50000, $gt: 30000 } },
+...   { $inc: { "bonus": 1500 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "sal": { $lte: 30000 } },
+...   { $inc: { "bonus": 1000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "mgr.name": "Satish" },
+...   {
+...     $set: {
+...       "mgr.name": "Tushar",
+...       "mgr.num": 3333
+...     }
+...   }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "dept.dname": "purchase department" },
+...   { $inc: { "sal": 15000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": "project-2" },
+...   { $inc: { "project.$.Hrs": -2 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": "project-2", "project.Hrs": 4 },
+...   { $pull: { "project": { "name": "project-2" } } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "sal": { $lt: 10000 } },
+...   { $set: { "sal": 10000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "sal": { $lt: 10000 } }, { $set: { "sal": 10000 } } );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany(  {
+...     $or: [
+...      { "bonus": { $lt: 2000 } },
+...       { "sal": { $lt: 20000 } },
+...     { "dept.dname": "sales department" }
+...    ]
+...   },
+...  { $inc: { "bonus": 500 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({
+...     $or: [
+...       { "Desg": "Analyst" },
+...       { "sal": { $in: [30000, 33000, 35000] } }
+...     ]
+...   },
+...   {
+...     $push: {
+...     "project": {
+...        $each: [
+...           { "name": "New Project 1", "Hrs": 0 },
+...           { "name": "New Project 2", "Hrs": 0 }
+...        ],
+...       $position: 2
+...       }
+...     }
+...   }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({
+...     "dept.dname": "HR",
+...     "dept.dloc": "Mumbai"
+...   },
+...   { $pop: { "project": 1 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": "Project-1", "project.Hrs": 4 },
+...   { $set: { "Desg": "senior programmer" } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "mgr.name": { $in: ["Rajan", "Revati"] } },
+...   { $set: { "hobbies": ["Hobby1", "Hobby2"] } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({
+...    $or: [
+...       { "project.name": "project-4", "project.Hrs": 3 },
+...      { "project.name": "project-3", "project.Hrs": 4 }
+...    ]
+...   },
+...   { $set: { "skillset": ["Skill1", "Skill2"] } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({
+...     "ename": { $regex: "^[Rp].*[js]$" }
+...   },
+...   { $push: { "hobbies": { $each: ["blogging"], $position: 2 } } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "ename": { $regex: "^[Rp].*[js]$" } }, { $push: { "hobbies": { $each: ["blogging"], $position: 2 } } } );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": { $in: ["project-1", "project-2", "project-3"] } },
+...   { $inc: { "sal": 10000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "dept.dloc": "Mumbai" },
+...   { $inc: { "bonus": -1000, "sal": 1000 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": "project-1" },
+...   { $pull: { "project": { "name": "project-1" } } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.replaceOne({ "ename": "Deepak" },
+...   {
+...     "emono": 123,
+...     "ename": "New Employee",
+...     "sal": 50000,
+...     "dept": {
+...       "deptno": 10,
+...       "dname": "IT",
+...       "dloc": "Bangalore"
+...     },
+...     "Desg": "Developer",
+...     "mgr": {
+...       "name": "Rajan",
+...       "num": 456
+...     },
+...     "project": [
+...       {
+...         "name": "Project-5",
+...         "Hrs": 6
+...       }
+...     ]
+...   }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.find({ename:"New Employee"})
+
+ncudb> db.employee.replaceOne({ "ename": "Deepak" }, { "emono": 123, "ename": "New Employee", "sal": 50000, "dept": { "deptno": 10, "dname": "IT", "dloc": "Bangalore" }, "Desg": "Developer", "mgr": { "name": "Rajan", "num": 456 }, "project": [ { "name": "Project-5", "Hrs": 6 }] } );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "skillset": "python" },
+...   { $set: { "skillset.$": "python 3.8" } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "dept.dloc": "Pune" },
+...   { $push: { "skillset": { $each: ["MongoDB", "Perl"] } } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "dept.dloc": "Pune" }, { $push: { "skillset": { $each: ["MongoDB", "Perl"] } } } );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": { $in: ["project-1", "project-2"] } },
+...   { $pop: { "hobbies": -1 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.1.Hrs": 4 },
+...   { $pop: { "hobbies": 1 } }
+... 
+AbortController              AbortSignal                  AggregateError
+Array                        ArrayBuffer                  Atomics
+BSONRegExp                   BSONSymbol                   BigInt
+BigInt64Array                BigUint64Array               BinData
+Binary                       Boolean                      Buffer
+Code                         DBQuery                      DBRef
+DataView                     Date                         Decimal128
+Double                       EJSON                        Error
+EvalError                    Event                        EventTarget
+FinalizationRegistry         Float32Array                 Float64Array
+Function                     HexData                      ISODate
+Infinity                     Int16Array                   Int32
+Int32Array                   Int8Array                    Intl
+JSON                         Long                         MD5
+Map                          Math                         MaxKey
+MessageChannel               MessageEvent                 MessagePort
+MinKey                       Mongo                        MongoshAsyncWriterError
+NaN                          Number                       NumberDecimal
+NumberInt                    NumberLong                   Object
+ObjectId                     Promise                      Proxy
+RangeError                   ReferenceError               Reflect
+RegExp                       Set                          SharedArrayBuffer
+String                       Symbol                       SyntaxError
+TextDecoder                  TextEncoder                  Timestamp
+TypeError                    TypedArray                   URIError
+URL                          URLSearchParams              UUID
+Uint16Array                  Uint32Array                  Uint8Array
+Uint8ClampedArray            WeakMap                      WeakRef
+WeakSet                      WebAssembly                  _
+_arrayLikeToArray            _arrayWithHoles              _error
+_iterableToArrayLimit        _nonIterableRest             _print
+_slicedToArray               _unsupportedIterableToArray  assert
+async_hooks                  atob                         bsonsize
+btoa                         buffer                       buildInfo
+child_process                clearImmediate               clearInterval
+clearTimeout                 cls                          cluster
+config                       connect                      console
+constants                    convertShardKeyToHashed      crypto
+db                           decodeURI                    decodeURIComponent
+dgram                        diagnostics_channel          disableTelemetry
+dns                          domain                       edit
+enableTelemetry              encodeURI                    encodeURIComponent
+escape                       eval                         events
+exit                         fs                           global
+globalThis                   help                         http
+http2                        https                        inspector
+isFinite                     isInteractive                isNaN
+it                           load                         module
+net                          origArraySort                origFptS
+origTypedArraySort           os                           parseFloat
+parseInt                     passwordPrompt               path
+perf_hooks                   performance                  print
+printjson                    process                      punycode
+querystring                  queueMicrotask               quit
+readline                     repl                         require
+rs                           setImmediate                 setInterval
+setTimeout                   sh                           show
+sleep                        snippet                      stream
+string_decoder               sys                          timers
+tls                          trace_events                 tty
+undefined                    unescape                     url
+use                          util                         v8
+version                      vm                           worker_threads
+zlib
+
+__proto__                    constructor                  hasOwnProperty
+isPrototypeOf                propertyIsEnumerable         toLocaleString
+toString                     valueOf
+
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "skillset": { $in: ["Perl", "python"] } },
+...   {
+...     $push: {
+...       "project": { $each: [{ "name": "New Project 1", "Hrs": 0 }, { "name": "New Project     2", "Hrs": 0 }] }
+...     }
+...   }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "skillset": { $in: ["Perl", "python"] } }, { $push: { "project": { $each: [{ "name": "New Project 1", "Hrs": 0 }, { "name": "New Project     2", "Hrs": 0 }] } } } );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({"skillset":{$in:["Perl","python"]}},{$push:{"project":{$each:[{"name":"New Project 1","Hrs":0},{"name":"New Project 2", "Hrs":0}]}}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> db.employee.updateMany({ "project.name": "project-1", "project.Hrs": { $lt: 6 } },
+...   { $set: { "project.$.Hrs": 6 } }
+... );
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ncudb> 
